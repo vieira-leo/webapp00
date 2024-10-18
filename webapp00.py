@@ -13,7 +13,7 @@ st.title("Fisrt attempt streamlit")
 st.header("By: Leonardo Vieira")
 
 # Use st.subheader("") para adicionar um SUB CABEÇALHO ao seu Web app
-st.subheader("In a scale of 1 to 100, how much do you know about proggraming?")
+st.subheader("In a scale of 1 to 100, how much do you know about programming?")
 
 # Use st.write("") para adicionar um texto ao seu Web app
 st.write("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
