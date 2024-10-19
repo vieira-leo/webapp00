@@ -1,4 +1,10 @@
 # MEU PRIMEIRO WEB APP
+import streamlit as st
+from ACTlib01 import *
+url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQFwxxM13bxUC0dpyd0w0PxfZIrJ-hp4Px-R6rsTiG3c3n-89JApzA0jYJpU9vNfxeNCvtJ0Cg35KtO/pub?gid=556192647&single=true&output=csv"
+db = Ler_GooglePlanilha(url)
+db.fillna('', inplace=True)
+Escrever(db)
 
 # Use st.title("") para adicionar um TÍTULO ao seu Web app
 st.title("Fisrt attempt streamlit")
@@ -16,26 +22,3 @@ values = st.slider("Select a range of values", 0.0, 100.0, (5.0, 15.0))
 st.write("Values:", values)
 import streamlit as st
 
-import streamlit as st
-from ACTlib01 import *
-url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQFwxxM13bxUC0dpyd0w0PxfZIrJ-hp4Px-R6rsTiG3c3n-89JApzA0jYJpU9vNfxeNCvtJ0Cg35KtO/pub?gid=556192647&single=true&output=csv"
-db = Ler_GooglePlanilha(url)
-db.fillna('', inplace=True)
-Escrever(db)
-# Creating columns with custom width ratios
-col1, col2, col3 = st.columns([1, 2, 3])
-
-# Adding elements to the first column
-with col1:
-    st.write("Column 1")
-    st.write("Content A")
-
-# Adding elements to the second column
-with col2:
-    st.write("Column 2")
-    st.write("Content B")
-
-# Adding elements to the third column
-with col3:
-    st.write("Column 3")
-    st.write("Content C")
