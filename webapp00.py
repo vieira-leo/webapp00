@@ -20,3 +20,22 @@ st.write("Como já deve ter percebido, o método st.write() é usado para escrit
 
 values = st.slider("Select a range of values", 0.0, 100.0, (5.0, 15.0))
 st.write("Values:", values)
+import streamlit as st
+
+# Creating columns with custom width ratios
+col1, col2, col3 = st.columns([1, 2, 3])
+
+# Adding elements to the first column
+with col1:
+    st.write("Column 1")
+    st.write("Content A")
+
+# Adding elements to the second column
+with col2:
+    st.write("Column 2")
+    st.write("Content B")
+
+# Adding elements to the third column
+with col3:
+    st.write("Column 3")
+    st.write("Content C")
